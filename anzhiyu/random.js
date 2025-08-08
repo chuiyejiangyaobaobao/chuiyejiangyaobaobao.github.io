@@ -1,6 +1,6 @@
 var posts=["2025/08/04/hello-world/"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
-  };var friend_link_list=[{"name":"Hexo","link":"https://hexo.io/zh-tw/","avatar":"https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg","descr":"快速、简单且强大的网站框架"},{"name":"anzhiyu主题","link":"https://blog.anheyu.com/","avatar":"https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg","descr":"生活明朗，万物可爱","siteshot":"https://npm.elemecdn.com/anzhiyu-theme-static@1.1.6/img/blog.anheyu.com.jpg"},{"name":"星辰の笔记","link":"https://blog.strarry.top","avatar":"https://blog.strarry.top/avatar.jpg","descr":"Code | Think | Share | Repeat","color":"vip","tag":"技术"}];
+  };var friend_link_list=[{"name":"星辰の笔记","link":"https://blog.strarry.top","avatar":"https://blog.strarry.top/avatar.jpg","descr":"Code | Think | Share | Repeat","color":"vip","tag":"首个"}];
     var refreshNum = 1;
     function friendChainRandomTransmission() {
       const randomIndex = Math.floor(Math.random() * friend_link_list.length);
