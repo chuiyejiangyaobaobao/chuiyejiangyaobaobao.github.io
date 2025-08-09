@@ -1,6 +1,6 @@
 var posts=["2025/08/09/hexo/"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
-  };var friend_link_list=[{"name":"星辰の笔记","link":"https://blog.strarry.top","avatar":"https://blog.strarry.top/avatar.jpg","descr":"Code | Think | Share | Repeat","color":"vip","tag":"首个"}];
+  };var friend_link_list=[{"name":"星辰の笔记","link":"https://blog.strarry.top","avatar":"https://blog.strarry.top/avatar.jpg","siteshot":"https://blog.strarry.top/cover.png","descr":"Code | Think | Share | Repeat","color":"vip","tag":"首个"}];
     var refreshNum = 1;
     function friendChainRandomTransmission() {
       const randomIndex = Math.floor(Math.random() * friend_link_list.length);
