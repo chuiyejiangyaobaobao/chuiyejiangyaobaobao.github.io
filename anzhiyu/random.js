@@ -1,4 +1,4 @@
-var posts=["2025/08/04/hello-world/"];function toRandomPost(){
+var posts=["2025/08/09/hexo/"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };var friend_link_list=[{"name":"星辰の笔记","link":"https://blog.strarry.top","avatar":"https://blog.strarry.top/avatar.jpg","descr":"Code | Think | Share | Repeat","color":"vip","tag":"首个"}];
     var refreshNum = 1;
