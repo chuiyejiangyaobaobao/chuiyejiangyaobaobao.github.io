@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cyblogs.qzz.io/posts/5d9c11ea.html</loc>
+    
+    <lastmod>2025-08-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://cyblogs.qzz.io/privacy/index.html</loc>
     
     <lastmod>2025-08-11</lastmod>
@@ -12,15 +21,6 @@
   
   <url>
     <loc>https://cyblogs.qzz.io/posts/c7ff2af7.html</loc>
-    
-    <lastmod>2025-08-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://cyblogs.qzz.io/posts/5d9c11ea.html</loc>
     
     <lastmod>2025-08-09</lastmod>
     
