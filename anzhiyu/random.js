@@ -1,4 +1,4 @@
-var posts=["posts/c7ff2af7.html","posts/5d9c11ea.html"];function toRandomPost(){
+var posts=["posts/c7ff2af7/","posts/5d9c11ea/"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };var friend_link_list=[{"name":"星辰の笔记","link":"https://blog.strarry.top","avatar":"https://blog.strarry.top/avatar.jpg","siteshot":"https://blog.strarry.top/cover.png","descr":"Code | Think | Share | Repeat","color":"vip","tag":"首个"}];
     var refreshNum = 1;
