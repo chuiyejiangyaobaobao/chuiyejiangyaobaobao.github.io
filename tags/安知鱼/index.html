@@ -71,7 +71,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2025-08-21 20:37:28',
+  postUpdate: '2025-08-21 22:32:32',
   postMainColor: '',
 }</script><noscript><style type="text/css">
   #nav {
@@ -458,4 +458,72 @@ document.addEventListener('pjax:error', e => {
   if (e.request.status === 404) {
     pjax.loadUrl('/404.html')
   }
-})</script><script async="" data-pjax="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
+})</script><script async="" data-pjax="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div><script>// 等待页面完全加载
+window.addEventListener('load', function() {
+  // 动态导入 quicklink
+  if (typeof import === 'function') {
+    import('quicklink').then((module) => {
+      const quicklink = module.default || module.quicklink;
+      
+      // 配置选项
+      const options = {
+        el: document.querySelector('.post') || document.querySelector('#post') || document.querySelector('.article-content') || document.body,
+        timeout: 2000,
+        priority: true,
+        ignores: [
+          // 忽略外部链接（请替换为您的域名）
+          /^https?:\/\/(?!(blog\\.cy00\\.top|cyblogs\\.netlify\\.app|localhost|127\\.0\\.0\\.1)).*/,
+          // 忽略特定文件类型
+          function(uri) { return /\\.(pdf|zip|rar|exe|dmg)$/i.test(uri); },
+          // 忽略管理员链接
+          function(uri) { return /\\/(admin|wp-admin|login|dashboard)\\/?/i.test(uri); },
+          // 忽略当前页面
+          function(uri) { return uri === window.location.href; }
+        ]
+      };
+      
+      // 初始化 quicklink
+      if (typeof quicklink !== 'undefined' && typeof quicklink.listen === 'function') {
+        quicklink.listen(options);
+      }
+    }).catch(function(error) {
+      // 静默失败，不显示错误信息
+      loadQuicklinkFromCDN();
+    });
+  } else {
+    // 浏览器不支持动态导入，使用 CDN
+    loadQuicklinkFromCDN();
+  }
+  
+  // CDN 后备方案
+  function loadQuicklinkFromCDN() {
+    // 检查是否已加载
+    if (typeof window.quicklink !== 'undefined') return;
+    
+    var script = document.createElement('script');
+    script.src = 'https://unpkg.com/quicklink@2.3.0/dist/quicklink.umd.js';
+    script.onload = function() {
+      // 配置选项（同上）
+      const options = {
+        el: document.querySelector('.post') || document.querySelector('#post') || document.querySelector('.article-content') || document.body,
+        timeout: 2000,
+        priority: true,
+        ignores: [
+          /^https?:\/\/(?!(blog\\.cy00\\.top|cyblogs\\.netlify\\.app|localhost|127\\.0\\.0\\.1)).*/,
+          function(uri) { return /\\.(pdf|zip|rar|exe|dmg)$/i.test(uri); },
+          function(uri) { return /\\/(admin|wp-admin|login|dashboard)\\/?/i.test(uri); },
+          function(uri) { return uri === window.location.href; }
+        ]
+      };
+      
+      // 初始化 quicklink
+      if (typeof window.quicklink !== 'undefined' && typeof window.quicklink.listen === 'function') {
+        window.quicklink.listen(options);
+      }
+    };
+    script.onerror = function() {
+      // 静默失败，不显示错误信息
+    };
+    document.head.appendChild(script);
+  }
+});</script></body></html>
